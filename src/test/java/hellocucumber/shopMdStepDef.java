@@ -27,7 +27,7 @@ public class shopMdStepDef {
 
     @Then("the page title should start with {string}")
     public void thePageTitleShouldStartWith(String title) {
-        new WebDriverWait(driver, Duration.ofMillis(10L)).until(new ExpectedCondition<Object>() {
+        new WebDriverWait(driver, Duration.ofMillis(100L)).until(new ExpectedCondition<Object>() {
             @Override
             public Object apply(WebDriver webDriver) {
                 System.out.println(webDriver.getTitle());

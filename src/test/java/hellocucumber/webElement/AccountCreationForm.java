@@ -9,7 +9,6 @@ public class AccountCreationForm {
     WebElement email;
     WebElement password;
     WebElement phone;
-    WebElement submitButton;
     WebElement form;
 
     public WebElement getFirst_name() {
@@ -32,10 +31,6 @@ public class AccountCreationForm {
         return phone;
     }
 
-    public WebElement getSubmitButton() {
-        return submitButton;
-    }
-
     public WebElement getForm() {
         return form;
     }
@@ -46,7 +41,6 @@ public class AccountCreationForm {
         this.email = formElement.findElement(By.xpath("//input[@name=\"email\"]"));
         this.password = formElement.findElement(By.xpath("//input[@name=\"password\"]"));
         this.phone = formElement.findElement(By.xpath("//input[@name=\"phone\"]"));
-        this.submitButton = formElement.findElement(By.xpath("//input[@name=\"lastname\"]"));
         this.form = formElement.findElement(By.xpath("//*[@id=\"customer-form\"]/div/div[7]/button"));
     }
 
