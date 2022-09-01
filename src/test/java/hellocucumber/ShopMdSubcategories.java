@@ -1,5 +1,6 @@
 package hellocucumber;
 
+import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -23,7 +24,6 @@ public class ShopMdSubcategories {
         driver.get("https://shop.md/en/");
     }
 
-
     @Then("I click on subcategories")
     public void iClickOnSubcategories() {
         Actions actions = new Actions(driver);
@@ -42,4 +42,10 @@ public class ShopMdSubcategories {
         });
         assertEquals(expected_result, actual_result);
     }
+
+    @After()
+    public void closeWebDriver(){
+        driver.quit();
+    }
+
 }

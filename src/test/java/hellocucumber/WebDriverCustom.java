@@ -15,8 +15,9 @@ public class WebDriverCustom {
     public WebDriver getDriver(){
         return driver;
     }
+    public void homePage(){
+        this.driver.get("https://shop.md/en/");
+    }
 
-
-//    private final WebDriver driver = new FirefoxDriver();
 }
 
